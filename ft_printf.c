@@ -6,7 +6,7 @@
 /*   By: dlima-li <dlima-li@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 17:29:55 by dlima-li          #+#    #+#             */
-/*   Updated: 2025/11/03 17:58:57 by dlima-li         ###   ########.fr       */
+/*   Updated: 2025/11/04 12:47:57 by dlima-li         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ int	ft_printf(const char *format, ...)
 				str++;
 				counter++;
 			}
+
 		}
 		else 
 		{
@@ -50,9 +51,5 @@ int	ft_printf(const char *format, ...)
 		format++;
 	}
 	va_end(args);
-	return (counter);
+	return ();
 }
-
-
-
-	
