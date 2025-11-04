@@ -11,45 +11,54 @@
 /* ************************************************************************** */
 
 #include <stdarg.h>
-#include "libftprintf.h"
+#include "libft.h"
+
+int	ft_formats(const char format, va_list args)
+{
+	int	counter;
+
+	counter = 0;
+	if (format == '%')
+		write (1, "%", 1)
+	else if (format == 'c')
+
+	else if (format == 's')
+
+	else if (format == 'p')
+
+	else if (format == 'd')
+
+	else if (format == 'i')
+
+	else if (format == 'u')
+
+	else if (format == 'x')
+
+	else if (format == 'X')
+
+	return (counter);
+}
 
 int	ft_printf(const char *format, ...)
 {
-	va_list args;
-	va_start(args, format);
-	while (*format)
-	{
-		if (*format == '%')
-			format++;
-		if (*format == '%')
-		{
-			ft_putchar('%')
-			counter++;
-		}
-		else if (*format == 'c')
-		{
-			int chr = va_arg(args, int);
-			ft_putchar(ch);
-			counter++;
-		}
-		else if (*format == 's')
-		{
-			char *str = va_arg(args, char *);
-			while (*str)
-			{
-				ft_putchar(*str);
-				str++;
-				counter++;
-			}
+	int		i;
+	va_list	args;
+	int		print_length;
 
-		}
-		else 
+	i = 0;
+	print_length = 0;
+	va_start(args, format);
+	while (format[i])
+	{
+		if (format[i] == '%')
 		{
-			ft_putchar(*format);
-			counter++;
+			print_length += ft_formats(format[i + 1, args]);
+			i++;
 		}
-		format++;
+		else
+			print_length += ft_printchar(format[i]);
+		i++;
 	}
 	va_end(args);
-	return ();
+	return (print_length);
 }
