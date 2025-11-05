@@ -19,19 +19,17 @@ int	ft_ptrlen(long long ptr)
 	int	len;
 
 	len = 0;
-	while (ptr !=0)
+	while (ptr != 0)
 	{
 		len++;
-		ptr = ptr /16;
+		ptr = ptr / 16;
 	}
 	return (len);
 }
 
-
 int	ft_printpointer(long long ptr)
 {
 	if (ptr == 0)
-
 		return (write(1, "(nil)", 5));
 	else
 	{
