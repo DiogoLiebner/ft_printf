@@ -1,17 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_printf_ptr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlima-li <dlima-li@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/04 12:53:02 by dlima-li          #+#    #+#             */
-/*   Updated: 2025/11/04 12:57:42 by dlima-li         ###   ########.fr       */
+/*   Created: 2025/11/04 15:00:24 by dlima-li          #+#    #+#             */
+/*   Updated: 2025/11/04 15:03:18 by dlima-li         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_A
-# define LIBFTPRINTF_A
+#include <unistd.h>
+#include "libft.h"
+#include "ft_printf.h"
 
+int	ft_printptr(void *ptr)
+{
+	int	i;
 
-#endif
+	i = 0;
+	write (1, '0', 1);
+	write (1, 'x', 1);
+	
+}

@@ -12,6 +12,7 @@
 
 #include <stdarg.h>
 #include "libft.h"
+#include "ft_printf.h"
 
 int	ft_formats(const char format, va_list args)
 {
