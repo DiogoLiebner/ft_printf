@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
 #include <unistd.h>
 #include "libft.h"
 #include "ft_printf.h"
@@ -19,7 +20,9 @@ int	ft_printptr(void *ptr)
 	int	i;
 
 	i = 0;
-	write (1, '0', 1);
-	write (1, 'x', 1);
-	
-}
+	if (ptr == NULL)
+		return (write(1, "(nil)", 5));
+	else
+		write(1, '0x', 2);
+
+}*/

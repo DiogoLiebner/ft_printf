@@ -14,13 +14,9 @@
 #include "libft.h"
 #include "ft_printf.h"
 
-void	ft_putstr(char *str)
+int	ft_printchar(int c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i]);
-		write(1, &str[i], 1);
+	return (write(1, &c, 1));
 }
 
 int	ft_printstr(char *str)
@@ -29,10 +25,7 @@ int	ft_printstr(char *str)
 
 	i = 0;
 	if (str == NULL)
-	{
-		ft_putstr("(null)");
-		return (6);
-	}
+		return (write(1, "(null)", 6));
 	while (str[i])
 		write(1, &str[i++], 1);
 	return (i);
