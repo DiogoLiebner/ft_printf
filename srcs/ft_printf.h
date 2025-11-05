@@ -23,11 +23,11 @@ int		ft_printstr(char *str);
 int		ft_printnbr(int nbr);
 int		ft_intlen(unsigned int nbr);
 int		ft_printunsignedint(unsigned int nbr);
-int		ft_hexnumlength(int nbr);
-int		ft_hexprint(int nbr, char format);
-int             ft_ptrlen(unsigned long long);
-int             ft_printpointer(unsigned long long);
+int		ft_hexnumlength(long long nbr);
+int		ft_hexprint(long long nbr, char format);
+int             ft_ptrlen(long long ptr);
+int             ft_printpointer(long long ptr);
 
-void	ft_hexconvert(int nbr, char format);
+void	ft_hexconvert(long long nbr, char format);
 
 #endif

@@ -26,13 +26,13 @@ int	ft_formats(const char format, va_list args)
 	else if (format == 's')
 		counter += ft_printstr(va_arg(args, char *));
 	else if (format == 'p')
-		counter += ft_printpointer(va_arg(args, unsigned long long));
+		counter += ft_printpointer(va_arg(args, long long));
 	else if (format == 'd' || format == 'i')
 		counter += ft_printnbr(va_arg(args, int));
 	else if (format == 'u')
 		counter += ft_printunsignedint(va_arg(args, unsigned int));
 	else if (format == 'x' || format == 'X')
-		counter += ft_hexprint(va_arg(args, int), format);
+		counter += ft_hexprint(va_arg(args, long long), format);
 	return (counter);
 }
 

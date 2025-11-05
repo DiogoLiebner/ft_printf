@@ -13,7 +13,7 @@
 #include "libft.h"
 #include "ft_printf.h"
 
-int	ft_hexnumlength(int nbr)
+int	ft_hexnumlength(long long nbr)
 {
 	int	len;
 
@@ -26,7 +26,7 @@ int	ft_hexnumlength(int nbr)
 	return (len);
 }
 
-void	ft_hexconvert(int nbr, char format)
+void	ft_hexconvert(long long nbr, char format)
 {
 	if (nbr >= 16)
 	{
@@ -47,7 +47,7 @@ void	ft_hexconvert(int nbr, char format)
 	}
 }
 
-int	ft_hexprint(int nbr, char format)
+int	ft_hexprint(long long nbr, char format)
 {
 	if (nbr == 0)
 		write (1, "0", 1);

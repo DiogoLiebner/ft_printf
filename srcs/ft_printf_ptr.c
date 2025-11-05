@@ -14,7 +14,7 @@
 #include "libft.h"
 #include "ft_printf.h"
 
-int	ft_ptrlen(unsigned long long ptr)
+int	ft_ptrlen(long long ptr)
 {
 	int	len;
 
@@ -28,19 +28,15 @@ int	ft_ptrlen(unsigned long long ptr)
 }
 
 
-int	ft_printpointer(unsigned long long ptr)
+int	ft_printpointer(long long ptr)
 {
-	int	len;
-
-	len = 0;
 	if (ptr == 0)
 
 		return (write(1, "(nil)", 5));
 	else
 	{
 		write(1, "0x", 2);
-		len += 2;
-		len += ft_hexprint(ptr, 'x');
+		ft_hexprint(ptr, 'x');
 	}
-	return (len);
+	return (ft_ptrlen(ptr) + 2);
 }
