@@ -59,7 +59,7 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (print_length);
 }
-/*
+
 #include <stdio.h>
 
 int	main(void)
@@ -85,4 +85,4 @@ int	main(void)
 	printf("The Address of the pointer ptr is : %p\nAnd the Address of the pointer nptr is %p\n", ptr, nptr);
 
 	return (0);
-}*/
+}
