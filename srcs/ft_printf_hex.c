@@ -45,7 +45,6 @@ void	ft_hexconvert(int nbr, char format)
 				ft_printchar(nbr - 10 + 'A');
 		}
 	}
-
 }
 
 int	ft_hexprint(int nbr, char format)

@@ -10,19 +10,37 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
 #include <unistd.h>
 #include "libft.h"
 #include "ft_printf.h"
 
-int	ft_printptr(void *ptr)
+int	ft_ptrlen(unsigned long long ptr)
 {
-	int	i;
+	int	len;
 
-	i = 0;
-	if (ptr == NULL)
+	len = 0;
+	while (ptr !=0)
+	{
+		len++;
+		ptr = ptr /16;
+	}
+	return (len);
+}
+
+
+int	ft_printpointer(unsigned long long ptr)
+{
+	int	len;
+
+	len = 0;
+	if (ptr == 0)
+
 		return (write(1, "(nil)", 5));
 	else
-		write(1, '0x', 2);
-
-}*/
+	{
+		write(1, "0x", 2);
+		len += 2;
+		len += ft_hexprint(ptr, 'x');
+	}
+	return (len);
+}

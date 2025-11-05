@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlima-li <dlima-li@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_A
-# define LIBFTPRINTF_A
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <stdarg.h>
 # include <unistd.h>
@@ -25,6 +25,8 @@ int		ft_intlen(unsigned int nbr);
 int		ft_printunsignedint(unsigned int nbr);
 int		ft_hexnumlength(int nbr);
 int		ft_hexprint(int nbr, char format);
+int             ft_ptrlen(unsigned long long);
+int             ft_printpointer(unsigned long long);
 
 void	ft_hexconvert(int nbr, char format);
 

@@ -33,7 +33,7 @@ int	ft_printunsignedint(unsigned int nbr)
 {
 	int		size;
 	int		i;
-	char 	*unsintstr;
+	char	*unsintstr;
 
 	size = ft_intlen(nbr);
 	i = size - 1;
@@ -52,5 +52,3 @@ int	ft_printunsignedint(unsigned int nbr)
 	free(unsintstr);
 	return (size);
 }
-
-
