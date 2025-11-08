@@ -10,7 +10,11 @@
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = 		/srcs
+
+
+PRINT_SRCS = 		$(wildcard srcs/*.c)
+LIBFT_SRCS = 		$(wildcard libft/*.c)
+SRCS = 			$(PRINT_SRCS) $(LIBFT_SRCS)
 
 OFILES = 	$(SRCS:.c=.o)
 
