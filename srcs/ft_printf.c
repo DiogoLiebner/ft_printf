@@ -32,7 +32,7 @@ int	ft_formats(const char format, va_list args)
 	else if (format == 'u')
 		counter += ft_printunsignedint(va_arg(args, unsigned int));
 	else if (format == 'x' || format == 'X')
-		counter += ft_hexprint(va_arg(args, long long), format);
+		counter += ft_hexprint(va_arg(args, unsigned int), format);
 	return (counter);
 }
 
@@ -61,14 +61,15 @@ int	ft_printf(const char *format, ...)
 }
 
 #include <stdio.h>
+#include <limits.h>
 
 int	main(void)
 {
-	char c = 'a';
+	/*char c = 'a';
 	char *str = NULL;
 	int	i = 1;
 	unsigned int j = 436;
-	int 	hex = 4636;
+	int 	hex = 0;
 	void *ptr = &str;
 	void *nptr = NULL;
 
@@ -77,12 +78,16 @@ int	main(void)
 	ft_printf("The Integer I is equal to : %d\n And the Unsigned Integer is equal to %u\n", i, j);
 	ft_printf("The Integer hex that is equal to %d, is %X or %x in its hexadecimal form\n", hex, hex, hex);
 	ft_printf("The Address of the pointer ptr is : %p\nAnd the Address of the pointer nptr is %p\n\n\n\n", ptr, nptr);
-	
-	printf("printf implementation:\n");
+	ft_printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %c%%", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42, 'C', "0", 0, 0 ,0 ,0, 42, 0);
+	ft_printf("\n");
+	printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %c%%", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42, 'C', "0", 0, 0 ,0 ,0, 42, 0);
+	printf("\nprintf implementation:\n");
 	printf("The Character C is equal to: %c\n And the String str is equal to : %s\n", c, str);
 	printf("The Integer I is equal to : %d\n And the Unsigned Integer is equal to %u\n", i, j);
 	printf("The Integer hex that is equal to %d, is %X or %x in its hexadecimal form\n", hex, hex, hex);
 	printf("The Address of the pointer ptr is : %p\nAnd the Address of the pointer nptr is %p\n", ptr, nptr);
-
+	*/
+	printf("%X\n", INT_MAX);
+	printf("%x", INT_MIN);
 	return (0);
 }

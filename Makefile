@@ -6,7 +6,7 @@
 #    By: dlima-li <dlima-li@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/29 15:47:38 by dlima-li          #+#    #+#              #
-#    Updated: 2025/10/29 16:16:52 by dlima-li         ###   ########.fr        #
+#    Updated: 2025/11/10 13:31:30 by dlima-li         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ clean:
 		rm -f $(OFILES)
 
 fclean:		clean
-		fm -f $(NAME)
+		rm -f $(NAME)
 
 re:		fclean $(NAME)
 

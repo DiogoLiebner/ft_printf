@@ -28,6 +28,8 @@ int	ft_hexnumlength(long long nbr)
 
 void	ft_hexconvert(long long nbr, char format)
 {
+	if (nbr < 0)
+		return ;
 	if (nbr >= 16)
 	{
 		ft_hexconvert(nbr / 16, format);
@@ -43,6 +45,8 @@ void	ft_hexconvert(long long nbr, char format)
 				ft_printchar(nbr - 10 + 'a');
 			if (format == 'X')
 				ft_printchar(nbr - 10 + 'A');
+			else
+				return ;
 		}
 	}
 }
